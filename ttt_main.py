@@ -14,6 +14,8 @@ pygame.display.set_caption('Tic Tac Toe')
 # Init board as all zeros 
 board = [[0,0,0],[0,0,0],[0,0,0]]
 
+playerX = True
+
 BLACK = (0,0,0)
 WHITE = (255,255,255)
 ORANGE = (255,127,36)
@@ -86,7 +88,9 @@ while True:
             sys.exit()
 
         if event.type == pygame.KEYDOWN:
-            print event.key
+            #print event.key
+            #ai.answer(board, playerX)
+            print(ai.hasWinner(board))
 
             if event.key == pygame.K_ESCAPE: 
                 pygame.quit()
